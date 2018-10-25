@@ -48,4 +48,4 @@ gem 'slim-rails'
 
 gem 'webpacker'
 gem 'foreman'
-#gem 'material_icons'
+gem 'material_icons'

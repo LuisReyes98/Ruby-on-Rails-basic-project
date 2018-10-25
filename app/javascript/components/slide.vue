@@ -5,7 +5,10 @@
       </a>    
       <a id="home"  href="/home"> 
         
-        <span>Inicio</span>  
+        <span>
+          <i class="mi home"></i>
+          Inicio
+        </span>  
       </a>
       <a id="themes" href="/themes">
         <span>Temas</span>
