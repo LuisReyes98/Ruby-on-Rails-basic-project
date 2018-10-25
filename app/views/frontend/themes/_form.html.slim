@@ -1,0 +1,15 @@
+= form_for @frontend_theme do |f|
+  - if @frontend_theme.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@frontend_theme.errors.count, "error")} prohibited this frontend_theme from being saved:"
+      ul
+        - @frontend_theme.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_field :description
+  .actions = f.submit

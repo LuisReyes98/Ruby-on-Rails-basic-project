@@ -1,0 +1,27 @@
+h1 Listing frontend_critics
+
+table
+  thead
+    tr
+      th Score
+      th Title
+      th Description
+      th Theme
+      th
+      th
+      th
+
+  tbody
+    - @frontend_critics.each do |frontend_critic|
+      tr
+        td = frontend_critic.score
+        td = frontend_critic.title
+        td = frontend_critic.description
+        td = frontend_critic.theme_id
+        td = link_to 'Show', frontend_critic
+        td = link_to 'Edit', edit_frontend_critic_path(frontend_critic)
+        td = link_to 'Destroy', frontend_critic, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Critic', new_frontend_critic_path

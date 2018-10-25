@@ -1,0 +1,36 @@
+@import 'bootstrap';
+
+.bm-item-list{
+	a{
+		&:hover{
+
+			text-decoration: none;
+			span{
+				
+				color: #0261AA;
+			}
+		}
+	}
+	
+}
+
+.main-carousel{
+	background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+}
+
+
+
+.theme{
+	height: 100px;
+	display: inline-block;
+	.theme-title{
+		background-color: #4BABF4;
+		padding-left: 10px;
+	}	
+	.theme-body{
+		height: 100px;
+	}
+}

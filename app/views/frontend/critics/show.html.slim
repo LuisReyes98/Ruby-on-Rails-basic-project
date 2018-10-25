@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Score:
+  = @frontend_critic.score
+p
+  strong Title:
+  = @frontend_critic.title
+p
+  strong Description:
+  = @frontend_critic.description
+p
+  strong Theme:
+  = @frontend_critic.theme_id
+
+=> link_to 'Edit', edit_frontend_critic_path(@frontend_critic)
+'|
+=< link_to 'Back', frontend_critics_path

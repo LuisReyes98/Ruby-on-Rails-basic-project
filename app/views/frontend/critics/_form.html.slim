@@ -1,0 +1,21 @@
+= form_for @frontend_critic do |f|
+  - if @frontend_critic.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@frontend_critic.errors.count, "error")} prohibited this frontend_critic from being saved:"
+      ul
+        - @frontend_critic.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :score
+    = f.number_field :score
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :theme_id
+    = f.number_field :theme_id
+  .actions = f.submit

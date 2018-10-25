@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @frontend_theme.name
+p
+  strong Description:
+  = @frontend_theme.description
+
+=> link_to 'Edit', edit_frontend_theme_path(@frontend_theme)
+'|
+=< link_to 'Back', frontend_themes_path

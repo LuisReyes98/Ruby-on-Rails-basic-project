@@ -1,0 +1,16 @@
+{
+  "name": "project_interface",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "bootstrap-material-design-icons": "^2.2.0",
+    "material-design-icons": "^3.0.1",
+    "vue": "^2.5.17",
+    "vue-burger-menu": "^1.0.8",
+    "vue-loader": "14.2.2",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
+}

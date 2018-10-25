@@ -1,0 +1,14 @@
+.container  
+  .card
+    .card-title.text-center
+      h1 Temas Para Criticar
+    .card-body  
+      .col-12
+        - @frontend_themes.each do |frontend_theme|
+          .col-md-6.theme
+            .theme-title
+              strong.h2 = frontend_theme.name
+            .theme-body
+              p =frontend_theme.description
+
+
