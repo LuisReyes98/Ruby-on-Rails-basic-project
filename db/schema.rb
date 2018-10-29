@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2018_10_26_165813) do
     t.integer "score"
     t.string "title"
     t.string "description"
-    t.integer "theme_id"
+    t.integer "theme_id" 
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
