@@ -47,7 +47,7 @@ gem 'slim'
 gem 'slim-rails'
 
 #Front end gems
-gem 'webpacker'
+gem 'webpacker', '~> 3.5'
 gem 'foreman'
 #gem 'material_icons'
 
