@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
-
+  devise_for :users
+	
   namespace :frontend , path: '/' do
     resources :critics, :themes
   end

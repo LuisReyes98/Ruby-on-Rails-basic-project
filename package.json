@@ -8,6 +8,7 @@
     "vue": "^2.5.17",
     "vue-burger-menu": "^1.0.8",
     "vue-loader": "14.2.2",
+    "vue-sidebar-menu": "^1.0.4",
     "vue-template-compiler": "^2.5.17"
   },
   "devDependencies": {

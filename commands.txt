@@ -1,0 +1,4 @@
+
+##Kill process of a specific port 
+
+sudo kill `sudo lsof -t -i:3035`

@@ -9,6 +9,10 @@
 
 import Vue from 'vue/dist/vue.esm'
 import Slide from '../components/slide.vue'
+// import Sidebar from '../components/sidebar.vue'
+// import VueSidebarMenu from 'vue-sidebar-menu'
+
+// Vue.use(VueSidebarMenu)
 
 document.addEventListener('DOMContentLoaded', () => {
   
@@ -16,6 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
     el: 'slide',
     template: '<Slide/>',
     components: { Slide }
-  })
+  });
+	
+  // const sidebar = new Vue({
+  //   el: '#sidebar',
+  //   render: h => h(Sidebar),   
+  // });
 
-})
+});

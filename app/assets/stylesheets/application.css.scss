@@ -1,9 +1,13 @@
 /*
-*= require material_icons_unicode
+* require material_icons_unicode
 */
 
-@import 'bootstrap';
+@import 'bootstrap','fonts';
 
+
+body{
+	font-family: 'Signika', sans-serif;
+}
 
 .bm-item-list{
 	a{
@@ -39,3 +43,12 @@
 		height: 100px;
 	}
 }
+
+.footer{
+	background-color: #242435;
+	color: #FFF;
+	font-size: 1.5em;
+	height: 300px;
+}
+
+

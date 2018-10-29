@@ -46,6 +46,17 @@ gem 'jquery-rails'
 gem 'slim'
 gem 'slim-rails'
 
+#Front end gems
 gem 'webpacker'
 gem 'foreman'
-gem 'material_icons'
+#gem 'material_icons'
+
+# User sessions, roles and permissions
+gem 'devise'
+gem 'cancancan'
+gem 'rolify'
+
+# File management and storage management
+gem 'paperclip'
+gem 'paperclip-i18n'
+gem 'fog'

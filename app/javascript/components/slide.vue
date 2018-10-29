@@ -31,7 +31,8 @@
 </script>
 
 <style scoped>
-	a:hover {
-    text-decoration: none;
-	}
+  .bm-burger-button {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;    
+  }
 </style>

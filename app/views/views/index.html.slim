@@ -1,23 +1,22 @@
-.container  
-  .card
-  	.card-title
-  		p.h2.text-center Lo que tu pienses Importa
-  		i.mdi.mdi-home
-  		== material_icon.face 
-  	.carousel.slide#carousel data-ride="carousel" 
-			.carousel-inner style="width: 100%; height: 600px;"
-				.carousel-item.active.main-carousel style="background-image: url(#{asset_path 'books.jpg'});"
+.card
+	.card-title
+		p.h2.text-center Lo que tu pienses Importa
+		i.mdi.mdi-home
+		/== material_icon.face 
+	.carousel.slide#carousel data-ride="carousel" 
+		.carousel-inner style="width: 100%; height: 600px;"
+			.carousel-item.active.main-carousel style="background-image: url(#{asset_path 'books.jpg'});"
 
-				.carousel-item.main-carousel style="background-image: url(#{asset_path 'food.jpg'});"
+			.carousel-item.main-carousel style="background-image: url(#{asset_path 'food.jpg'});"
 
-				.carousel-item.main-carousel style="background-image: url(#{asset_path 'movie-1.jpg'});"
+			.carousel-item.main-carousel style="background-image: url(#{asset_path 'movie-1.jpg'});"
 
-				.carousel-item.main-carousel style="background-image: url(#{asset_path 'restaurant.jpg'}); "
-				
-			a.carousel-control-prev href="#carousel" role="button" data-slide="prev"
-		    span.carousel-control-prev-icon aria-hidden="true"
-		    span.sr-only Anterior
-			a.carousel-control-next href="#carousel" role="button" data-slide="next"
-		    span.carousel-control-next-icon aria-hidden="true"
-		    span.sr-only Siguiente
+			.carousel-item.main-carousel style="background-image: url(#{asset_path 'restaurant.jpg'}); "
+			
+		a.carousel-control-prev href="#carousel" role="button" data-slide="prev"
+	    span.carousel-control-prev-icon aria-hidden="true"
+	    span.sr-only Anterior
+		a.carousel-control-next href="#carousel" role="button" data-slide="next"
+	    span.carousel-control-next-icon aria-hidden="true"
+	    span.sr-only Siguiente
   	
