@@ -2,3 +2,9 @@
 ##Kill process of a specific port 
 
 sudo kill `sudo lsof -t -i:3035`
+
+
+Installing wepack and vue
+$ bin/rails webpacker:install
+$ bin/rails webpacker:install:vue
+$ bin/yarn install

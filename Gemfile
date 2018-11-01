@@ -49,7 +49,6 @@ gem 'slim-rails'
 #Front end gems
 gem 'webpacker', '~> 3.5'
 gem 'foreman'
-#gem 'material_icons'
 
 # User sessions, roles and permissions
 gem 'devise'
