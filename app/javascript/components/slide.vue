@@ -1,5 +1,5 @@
 <template >
-	 <Slide class="">
+	 <Slide class="" id="slide_nav_bar">
       <a id="login" href="#" data-toggle="modal" data-target="#login-modal" >
         <span>
         <i class="mdi mdi-account-outline"></i>

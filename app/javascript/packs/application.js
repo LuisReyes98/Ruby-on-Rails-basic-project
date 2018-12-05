@@ -1,6 +1,6 @@
 
-import Vue from 'vue/dist/vue.esm'
-import Slide from '../components/slide.vue'
+import Vue from 'vue/dist/vue.esm';
+import Slide from '../components/slide.vue';
 
 document.addEventListener('DOMContentLoaded', () => {
   
@@ -9,5 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     template: '<Slide/>',
     components: { Slide }
   });
+
+ 
 	
 });
