@@ -134,13 +134,14 @@ def logOut():
 	time.sleep(5) # Se espera unos segundos para poder cargar	
 	openNav()
 	openLogin()
+	time.sleep(2)
+	driver.quit()
 
 	pass
 
 if __name__ == '__main__':
-	global driver
 	main()
 	themesTest()
 	editTheme()
-	time.sleep(2)
-	driver.quit()	
+	logOut() #Llamar siempre de ultimo
+		
