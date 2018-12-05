@@ -74,9 +74,22 @@ def themesTest():
 	theme_description.send_keys(Keys.CONTROL, "a")
 	theme_description.send_keys('THIs is alot of text in order for this to work or it would say it is too short AAAAAAAAAAAAAAA')
 	time.sleep(2) # Se espera unos segundos para poder cargar	
-
 	theme_description.submit()
+	time.sleep(2) # Se espera unos segundos para poder cargar	
 
+def editTheme():
+	global driver
+	driver.find_element_by_id('edit_theme').click()
+	time.sleep(5) # Se espera unos segundos para poder cargar	
+
+	theme_name = driver.find_element_by_id('frontend_theme_name')
+	theme_name.clear()
+	theme_name.send_keys('Peliculas Geniales con Nombre cambiado totalmente original')
+	time.sleep(1) # Se espera unos segundos para poder cargar		
+	theme_name.submit()
+	time.sleep(1) # Se espera unos segundos para poder cargar	
+
+	pass
 	
 
 def checkError(mensaje):
@@ -90,7 +103,6 @@ def checkError(mensaje):
 
 def openNav():
 	global driver 
-
 	nav_bar = driver.find_element_by_class_name('bm-burger-button')
 	nav_bar.click()
 	time.sleep(5) # Se espera unos segundos para poder cargar
@@ -113,8 +125,22 @@ def openCritics():
 	critics.click()
 	time.sleep(5) # Se espera unos segundos para poder cargar	
 
+def logOut():
+	global driver
+	time.sleep(5) # Se espera unos segundos para poder cargar		
+	openNav()
+	openLogin()
+	driver.find_element_by_id('log_out').click()
+	time.sleep(5) # Se espera unos segundos para poder cargar	
+	openNav()
+	openLogin()
+
+	pass
+
 if __name__ == '__main__':
-	
-	#main()
+	global driver
+	main()
 	themesTest()
-	print('Termine')	
+	editTheme()
+	time.sleep(2)
+	driver.quit()	
