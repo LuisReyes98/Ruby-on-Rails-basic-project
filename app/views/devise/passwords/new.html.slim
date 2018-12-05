@@ -1,0 +1,16 @@
+h2 
+	| Contraseña olvidada?
+
+= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+	- if devise_error_messages!
+		= devise_error_messages!
+	.card
+		.input-group.mb-3
+			.input-group-prepend
+				= f.label :email do
+					span.input-group-text id="email_login" 
+						| Correo Eletrónico					  	
+			= f.email_field :email  ,  :class => 'form-control' , placeholder:'Correo Eletrónico' , 'aria-label':"email_login"	, 'aria-describedby':'email_login' , autofocus: true, autocomplete: "email"		
+		.actions
+			= f.submit "Send me reset password instructions" , class:'btn btn-secondary'
+/= render "devise/shared/links"

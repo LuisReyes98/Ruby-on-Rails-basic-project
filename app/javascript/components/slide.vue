@@ -1,20 +1,27 @@
 <template >
-	 <Slide>
-      <a id="login" href="#">
-        <span>Iniciar Sesión</span>
-      </a>    
-      <a id="home"  href="/home"> 
-        
+	 <Slide class="">
+      <a id="login" href="#" data-toggle="modal" data-target="#login-modal" >
         <span>
-          <i class="mi home"></i>
+        <i class="mdi mdi-account-outline"></i>
+        Iniciar Sesión</span>
+      </a>    
+      <a id="home"  href="/">         
+        <span>
+          <i class="mdi mdi-home"></i>
           Inicio
         </span>  
       </a>
       <a id="themes" href="/themes">
-        <span>Temas</span>
+        <span>
+        <i class="mdi mdi-bookmark"></i>
+        Temas
+        </span>
       </a>
       <a id="critics" href="/critics">
-        <span>Criticas</span>
+        <span>
+        <i class="mdi mdi-star-circle"></i>
+        Criticas
+        </span>
       </a>
     </Slide>
 <!-- .mdi.mdi-view-dashboard -->

@@ -1,8 +1,24 @@
-h1 Editing frontend_theme
-
-== render 'form'
-
-=> link_to 'Show', @frontend_theme
-'|
-=< link_to 'Back', frontend_themes_path
-
+.row
+  .col-12
+    .card
+      .card-header
+        .row.px-4
+          h4.card-title Editar #{@page_title}
+          nav.px-3.col-6  aria-label="breadcrumb"
+            ol class="breadcrumb"
+              li class="breadcrumb-item"
+                a href="#{root_path}" 
+                  | Inicio
+              li class="breadcrumb-item"
+                a href="#{frontend_themes_path}" 
+                  | Temas
+              li class="breadcrumb-item"
+                | Editar 
+                = @frontend_theme.name  
+      .card-body
+        .row
+          .col-12
+            == render 'form'
+          
+          .col-12
+          	br

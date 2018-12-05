@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+user = User.create(email: 'admin@admin.com' , password: 'admin123')
+user.save
+
 Frontend::Theme.create(name: 'Libros',description: 'Libros, Revistas, Comics y demas...')
 Frontend::Theme.create(name: 'Restaurantes',description: 'Comidas, Ubicación y Atención al servicio')
 Frontend::Theme.create(name: 'Peliculas',description: 'Ultimos Exitos de Hollywood y cine Internacional')

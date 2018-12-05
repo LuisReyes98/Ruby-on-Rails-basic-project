@@ -1,14 +1,26 @@
 .card
   .card-title.text-center
-    h1 Criticas
-    i.mdi.mdi-home
+    h1 = @page_title
+    .row.text-center.ml-5
+      nav.px-3.col-6  aria-label="breadcrumb"
+        ol class="breadcrumb"
+          li class="breadcrumb-item"
+            a href="#{root_path}" 
+              | Inicio
+          li class="breadcrumb-item"
+            = @page_title   
+      .col-5
+        = link_to 'Nueva Criticas', new_frontend_critic_path ,class:"btn btn-dark mb-4"
   .card-body
     a
     .col-12
       - @frontend_critics.each do |frontend_critic|
         .col-md-5.critic
-          .critic-title            
-            strong.h2 = frontend_critic.title            
+          .critic-title 
+            .row           
+              strong.h2.col-7 = frontend_critic.title     
+              .col-3
+                = link_to "Ver mas ",frontend_critic,class:"btn btn-success"       
           .critic-subtitle.col-8
             strong.h4 = Frontend::Theme.find(frontend_critic.theme_id).name             
           .critic-body              

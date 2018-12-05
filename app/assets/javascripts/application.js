@@ -13,7 +13,7 @@
 // require rails-ujs
 // require activestorage
 // require turbolinks
-// require_tree .
+// require_tree . //this brings errors
 
 //=require "./cable.js"
 //= require "./bootstrap/jquery.min.js" 

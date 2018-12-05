@@ -1,10 +1,13 @@
 class Frontend::CriticsController < ApplicationController
   before_action :set_frontend_critic, only: [:show, :edit, :update, :destroy]
+  before_action :set_page_title
 
   # GET /frontend/critics
   # GET /frontend/critics.json
   def index
     @frontend_critics = Frontend::Critic.all
+    
+    
   end
 
   # GET /frontend/critics/1
@@ -65,6 +68,9 @@ class Frontend::CriticsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_frontend_critic
       @frontend_critic = Frontend::Critic.find(params[:id])
+    end
+    def set_page_title
+      @page_title = "Críticas"
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

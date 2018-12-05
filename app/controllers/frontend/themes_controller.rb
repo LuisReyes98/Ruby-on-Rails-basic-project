@@ -1,6 +1,6 @@
 class Frontend::ThemesController < ApplicationController
   before_action :set_frontend_theme, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_page_title
   # GET /frontend/themes
   # GET /frontend/themes.json
   def index
@@ -65,6 +65,10 @@ class Frontend::ThemesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_frontend_theme
       @frontend_theme = Frontend::Theme.find(params[:id])
+    end
+
+    def set_page_title
+      @page_title = "Temas"
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -1,8 +1,59 @@
-Slide.nav-bar
+.nav__menu
+	Slide.nav-bar
 /#sidebar
 
 .modal.fade id="login-modal"
-  .modal-content
-    .modal-title
-      .h5 Iniciar Sesión
-    .modal-body
+	.modal-dialog role="document"
+	  .modal-content
+	  	.modal-header
+		    .modal-title.text-center
+					-if user_signed_in?
+						.h4 Bienvenido
+					-else 
+						.row
+							.h4.px-2 Iniciar Sesión
+							= link_to "Nuevo Usuario",new_user_registration_path,class:"btn btn-primary" 
+	    .modal-body
+	    	- if user_signed_in?
+					.h5 Hola #{current_user.email}	    		
+					.col-12.form-group.text-center
+						= link_to("Cerrar Sesión", destroy_user_session_path, :method => 'delete' , class:'btn btn-danger')            
+    		-else
+		    	= form_for(:user, :url => session_path(:user)) do |f|
+						- if flash[:alert]
+							div class="alert alert-danger alert-with-icon" data-notify="container"
+								span data-notify="icon" class="mdi mdi-alert"
+								span data-notify="message" class="text-justify" #{flash[:alert]}
+
+						- if flash[:notice]
+							div class="alert alert-info alert-with-icon" data-notify="container"
+								span data-notify="icon" class="mdi mdi-information-outline"
+								span data-notify="message" class="text-justify" #{flash[:notice]}
+
+						.input-group.mb-3
+							.input-group-prepend
+								= f.label :email do
+									span.input-group-text id="email_login" 
+										| Correo Eletrónico					  	
+							= f.email_field :email  ,  :class => 'form-control' , placeholder:'Correo Eletrónico' , 'aria-label':"email_login"	, 'aria-describedby':'email_login'				  
+						.input-group.mb-3
+							.input-group-prepend
+								= f.label :password do
+									span.input-group-text id="password_login" 
+										| Contraseña					  	
+							= f.password_field :password  ,  :class => 'form-control' , placeholder:'Contraseña' , 'aria-label':"password_login"	, 'aria-describedby':'password_login'				  	
+						.input-group.mb-3
+							.input-group-prepend
+								.form-control
+									.input-group-text.fill__all
+										= f.check_box :remember_me  , class:''							  				  
+							= f.label :remember_me do
+								span.form-control id="password_login" 
+									| Recuerdame					  	
+
+						.col-12.form-group.text-center
+							= f.submit 'Iniciar Sesion', class:'btn btn-primary' 
+						.col-12.form-group.text-center
+							= link_to "Forgot your password?", new_password_path(:user) 
+
+		  		

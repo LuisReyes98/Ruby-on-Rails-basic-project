@@ -1,18 +1,47 @@
-p#notice = notice
+.row
+  .col-12
+    .card
+      .card-header
+        .row
+          h2.card-title.px-3 #{@page_title}
+          nav.px-3  aria-label="breadcrumb"
+            ol class="breadcrumb"
+              li class="breadcrumb-item"
+                a href="#{root_path}" 
+                  | Inicio
+              li class="breadcrumb-item"
+                a href="#{frontend_critics_path}"
+                  | #{@page_title}
+              li class="breadcrumb-item active" aria-current="page"
+                = @frontend_critic.title
+      .card-body
+        .row
+          .col-12.col-sm-6.d-inline-flex.flex-row 
+            .h4
+              strong Tema: 
+            .bg-light.rounded.h4.px-4
+              = Frontend::Theme.find(@frontend_critic.theme_id).name                       
+          .col-12.col-sm-6.d-inline-flex.flex-row             
+            .h4
+              strong Titulo:  
+            .bg-light.rounded.h4.px-4
+              = @frontend_critic.title
+          .col-12.col-sm-6.d-inline-flex.flex-row 
+            .h4
+              strong Descripción:
+            .bg-light.rounded.h4.px-4
+              = @frontend_critic.description
+          .col-12.col-sm-6.d-inline-flex.flex-row 
+            .h4
+              strong Puntuación:
+            .bg-light.rounded.h4.px-4
+              = @frontend_critic.score   
+              | /10           
+          
+        .row
+          .col-12.col-sm-6.text-center 
+          
+            = link_to 'Editar', edit_frontend_critic_path(@frontend_critic), class:"btn btn-warning"
+            
+            = link_to 'Volver', frontend_critics_path ,class:"btn btn-primary"
 
-p
-  strong Score:
-  = @frontend_critic.score
-p
-  strong Title:
-  = @frontend_critic.title
-p
-  strong Description:
-  = @frontend_critic.description
-p
-  strong Theme:
-  = @frontend_critic.theme_id
-
-=> link_to 'Edit', edit_frontend_critic_path(@frontend_critic)
-'|
-=< link_to 'Back', frontend_critics_path

@@ -1,12 +1,36 @@
-p#notice = notice
+.row
+  .col-12
+    .card
+      .card-header
+        .row
+          h2.card-title.px-3 #{@page_title}
+          nav.px-3  aria-label="breadcrumb"
+            ol class="breadcrumb"
+              li class="breadcrumb-item"
+                a href="#{root_path}" 
+                  | Inicio
+              li class="breadcrumb-item"
+                a href="#{frontend_themes_path}"
+                  | #{@page_title}
+              li class="breadcrumb-item active" aria-current="page"
+                = @frontend_theme.name
 
-p
-  strong Name:
-  = @frontend_theme.name
-p
-  strong Description:
-  = @frontend_theme.description
+      .card-body
+        .row
+          .col-12.col-sm-6.d-inline-flex.flex-row             
+            .h3
+              strong Nombre:  
+            .bg-light.rounded.h3.px-4
+              = @frontend_theme.name
+          .col-12.col-sm-6.d-inline-flex.flex-row 
+            .h3
+              strong Descripción:
+            .bg-light.rounded.h3.px-4
+              = @frontend_theme.description
+        .row
+          .col-12.col-sm-6.text-center 
+          
+            = link_to 'Editar', edit_frontend_theme_path(@frontend_theme), class:"btn btn-warning"
+            
+            = link_to 'Volver', frontend_themes_path ,class:"btn btn-primary"
 
-=> link_to 'Edit', edit_frontend_theme_path(@frontend_theme)
-'|
-=< link_to 'Back', frontend_themes_path

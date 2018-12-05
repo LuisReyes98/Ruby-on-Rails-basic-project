@@ -1,0 +1,35 @@
+
+
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| 
+  = devise_error_messages! 
+  .card
+    .card-title.px-2.py-2
+      h2 Nuevo Usuario
+    .input-group.mb-3
+      .input-group-prepend
+        = f.label :email do
+          span.input-group-text id="email_login" 
+            | Correo Eletrónico             
+      = f.email_field :email  ,  :class => 'form-control' , placeholder:'Correo Eletrónico' , 'aria-label':"email_login"  , 'aria-describedby':'email_login' , autofocus: true, autocomplete: "email"   
+      .col-12.py-2
+        .font-weight-bold 
+          .px-1
+            | #{@minimum_password_length} caracteres minimo 
+      .input-group.mb-3
+        .input-group-prepend
+          = f.label :password do
+            span.input-group-text id="new_password" 
+              | Contraseña              
+        = f.password_field :password  ,  :class => 'form-control' , placeholder:'Contraseña' , 'aria-label':"new_password"  , 'aria-describedby':'new_password' ,autocomplete: "new-password" 
+      .input-group.mb-3
+        .input-group-prepend
+          = f.label :password_confirmation do
+            span.input-group-text id="password_confirmation" 
+              | Confirmar Contraseña              
+        = f.password_field :password_confirmation  ,  :class => 'form-control' , placeholder:'Contraseña' , 'aria-label':"password_confirmation"  , 'aria-describedby':'password_confirmation' ,autocomplete: "new-password" 
+
+    .actions.px-2.py-2
+      = f.submit "Registrarte" , class:"btn btn-primary"
+
+
+      /= render "devise/shared/links" 

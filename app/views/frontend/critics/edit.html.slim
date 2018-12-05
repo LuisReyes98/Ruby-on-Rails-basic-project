@@ -1,8 +1,24 @@
-h1 Editing frontend_critic
-
-== render 'form'
-
-=> link_to 'Show', @frontend_critic
-'|
-=< link_to 'Back', frontend_critics_path
-
+.row
+  .col-12
+    .card
+      .card-header
+        .row
+          h2.card-title.px-3 Editar #{@page_title}
+          nav.px-3  aria-label="breadcrumb"
+            ol class="breadcrumb"
+              li class="breadcrumb-item"
+                a href="#{root_path}" 
+                  | Inicio
+              li class="breadcrumb-item"
+                a href="#{frontend_critics_path}"
+                  | Críticas
+              li class="breadcrumb-item active" aria-current="page"
+                | Editar 
+                = @frontend_critic.title
+      .card-body
+        .row
+          .col-12
+            == render 'form'
+          
+          .col-12
+          	br

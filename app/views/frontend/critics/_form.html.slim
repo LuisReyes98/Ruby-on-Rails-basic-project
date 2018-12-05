@@ -1,21 +1,38 @@
 = form_for @frontend_critic do |f|
   - if @frontend_critic.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@frontend_critic.errors.count, "error")} prohibited this frontend_critic from being saved:"
-      ul
+    div class="alert alert-danger alert-with-icon" data-notify="container"
+      span data-notify="icon" class="mdi mdi-alert"
+      span data-notify="message" class="text-justify"
         - @frontend_critic.errors.full_messages.each do |message|
-          li = message
+          li #{message}  
+  .row
+    .form-group.col-12
+      .col-3
+        = f.label :score do
+          span Puntuación
+      .col-8        
+        = f.number_field :score , class:"form-control"
+    .form-group.col-12
+      .col-3  
+        = f.label :title do
+          span Titulo
+      .col-8  
+        = f.text_field :title  , class:"form-control"
+    .form-group.col-12
+      .col-3  
+        = f.label :description do
+          span Descripción
+      .col-8  
+        = f.text_area :description , class:"form-control"
+    .form-group.col-12
+      .col-3  
+        = f.label :theme_id do    
+          span Tema
+      .col-8  
+        = f.collection_select(:theme_id, Frontend::Theme.all, :id, :name,{:include_blank => 'Escoge un tema...'}, html_options = {:class => "custom-select"} )
+    
+    .col-12.row
+      a.btn.btn-danger.pull-left href="#{frontend_critics_path}"
+        | Volver
+      .actions = f.submit "Guardar",class:"btn btn-primary"
 
-  .field
-    = f.label :score
-    = f.number_field :score
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :description
-    = f.text_field :description
-  .field
-    = f.label :theme_id
-    = f.number_field :theme_id
-  .actions = f.submit
