@@ -1,0 +1,69 @@
+en:
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      model_invalid: "Validation failed: %{errors}"
+      inclusion: "is not included in the list"
+      exclusion: "is reserved"
+      invalid: "is invalid"
+      confirmation: "doesn't match %{attribute}"
+      accepted: "must be accepted"
+      empty: "can't be empty"
+      blank: "can't be blank"
+      present: "must be blank"
+      too_long:
+        one: "is too long (maximum is 1 character)"
+        other: "is too long (maximum is %{count} characters)"
+      too_short:
+        one: "is too short (minimum is 1 character)"
+        other: "is too short (minimum is %{count} characters)"
+      wrong_length:
+        one: "is the wrong length (should be 1 character)"
+        other: "is the wrong length (should be %{count} characters)"
+      not_a_number: "is not a number"
+      not_an_integer: "must be an integer"
+      greater_than: "must be greater than %{count}"
+      greater_than_or_equal_to: "must be greater than or equal to %{count}"
+      equal_to: "must be equal to %{count}"
+      less_than: "must be less than %{count}"
+      less_than_or_equal_to: "must be less than or equal to %{count}"
+      other_than: "must be other than %{count}"
+      odd: "must be odd"
+      even: "must be even"
+      taken: "is taken"
+      required: "is required"
+
+es:
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      model_invalid: "Validación fallida: %{errors}"
+      inclusion: "no está incluido en la lista"
+      exclusion: "está reservado"
+      invalid: "es inválido"
+      confirmation: "no coincide con %{attribute}"
+      accepted: "debe ser aceptado"
+      empty: "no puede estar vacío"
+      blank: "no puede estar en blanco"
+      present: "debe estar en blanco"
+      too_long:
+        one: "es muy largo (1 caracter máximo)"
+        other: "es muy largo (%{count} caracteres máximo)"
+      too_short:
+        one: "es muy corto (1 caracter máximo)"
+        other: "es muy corto (%{count} caracteres mínimo)"
+      wrong_length:
+        one: "no posee la longitud correcta (debe ser de 1 caracter)"
+        other: "no posee la longitud correcta (debe ser de %{count} caracteres)"
+      not_a_number: "no es un número"
+      not_an_integer: "debe ser un entero"
+      greater_than: "debe ser mayor a %{count}"
+      greater_than_or_equal_to: "debe ser mayor o igual a %{count}"
+      equal_to: "debe ser igual a %{count}"
+      less_than: "debe ser menor a %{count}"
+      less_than_or_equal_to: "debe ser menor o igual a %{count}"
+      other_than: "debe ser diferente a %{count}"
+      odd: "debe ser impar"
+      even: "debe ser par"
+      taken: "ya está en uso"
+      required: "es requerido"

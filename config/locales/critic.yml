@@ -1,0 +1,18 @@
+en:
+  critics:
+    title_edit: Edit predefined answer
+    title_index: List of predefined answers
+    title_new: New predefined answer
+    title_show: Show predefined answer
+    was_success_created: The predefined answer has been created successfully
+    was_success_destroyed: The predefined answer has been deleted successfully
+    was_success_updated: The predefined answer has been updated successfully
+es:
+  critics:
+    title_edit: Editar critica
+    title_index: Listado de criticas
+    title_new: Nueva critica
+    title_show: Ver critica
+    was_success_created: La critica se ha creado exitosamente.
+    was_success_destroyed: La critica se ha eliminado exitosamente.
+    was_success_updated: La critica se ha actualizado exitosamente.

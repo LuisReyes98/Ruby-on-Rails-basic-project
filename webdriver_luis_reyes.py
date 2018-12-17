@@ -1,7 +1,7 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-# Se le da al usuario la posibilidad de eligir si desea llevar la prueba a travez de Alerts o Prints
+#Luis Reyes C.I:27097304
 print("Prueba de pagina iniciada")
 print("Los mensajes de error del sistema se mostraran por consola")
 

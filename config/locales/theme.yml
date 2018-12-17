@@ -1,0 +1,18 @@
+en:
+  themes:
+    title_edit: Edit predefined answer
+    title_index: List of predefined answers
+    title_new: New predefined answer
+    title_show: Show predefined answer
+    was_success_created: The predefined answer has been created successfully
+    was_success_destroyed: The predefined answer has been deleted successfully
+    was_success_updated: The predefined answer has been updated successfully
+es:
+  themes:
+    title_edit: Editar tema
+    title_index: Listado de temas
+    title_new: Nueva tema
+    title_show: Ver tema
+    was_success_created: La tema se ha creado exitosamente.
+    was_success_destroyed: La tema se ha eliminado exitosamente.
+    was_success_updated: La tema se ha actualizado exitosamente.

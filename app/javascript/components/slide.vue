@@ -2,8 +2,9 @@
 	 <Slide class="" id="slide_nav_bar">
       <a id="login" href="#" data-toggle="modal" data-target="#login-modal" >
         <span>
-        <i class="mdi mdi-account-outline"></i>
-        Iniciar Sesión</span>
+          <i class="mdi mdi-account-outline"></i>
+          {{login}}
+        </span>
       </a>    
       <a id="home"  href="/">         
         <span>
@@ -31,6 +32,11 @@
 	import { Slide } from 'vue-burger-menu'  // import the CSS transitions you wish to use, in this case we are using `Slide`
 
 	export default {
+      data: function () {
+      return {
+          login: "Iniciar Sesión"
+        }
+      },
 	    components: {
 	        Slide // Register your component
 	    }

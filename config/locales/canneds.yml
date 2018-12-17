@@ -1,0 +1,18 @@
+en:
+  canneds:
+    title_edit: Edit predefined answer
+    title_index: List of predefined answers
+    title_new: New predefined answer
+    title_show: Show predefined answer
+    was_success_created: The predefined answer has been created successfully
+    was_success_destroyed: The predefined answer has been deleted successfully
+    was_success_updated: The predefined answer has been updated successfully
+es:
+  canneds:
+    title_edit: Editar respuesta predefinida
+    title_index: Listado de respuestas predefinidas
+    title_new: Nueva respuesta predefinida
+    title_show: Ver respuesta predefinida
+    was_success_created: La respuesta predefinida se ha creado exitosamente.
+    was_success_destroyed: La respuesta predefinida se ha eliminado exitosamente.
+    was_success_updated: La respuesta predefinida se ha actualizado exitosamente.

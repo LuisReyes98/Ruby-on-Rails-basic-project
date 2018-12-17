@@ -1,6 +1,6 @@
 = form_for @frontend_critic do |f|
   - if @frontend_critic.errors.any?
-    div class="alert alert-danger alert-with-icon" data-notify="container"
+    div class="alert alert-danger alert-with-icon animated fadeInDown" data-notify="container"
       span data-notify="icon" class="mdi mdi-alert"
       span data-notify="message" class="text-justify"
         - @frontend_critic.errors.full_messages.each do |message|

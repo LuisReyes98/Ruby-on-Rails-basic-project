@@ -1,0 +1,27 @@
+en:
+  activerecord:
+    attributes:
+      frontend/critics:
+        score: score
+        title: Content
+        description: Name
+        theme_id: Name
+      backend/category:
+        active: Activate?
+        kind: Type
+        name: Name
+        priority: Priority
+      
+es:
+  activerecord:
+    attributes:
+      frontend/critic:
+        score: Puntuación
+        title: Titulo
+        description: Descripción
+        theme_id: Tema
+        theme: Tema
+      frontend/theme:
+        name: Nombre
+        description: Descripción
+      
