@@ -1,24 +1,15 @@
-# README
+# Ruby on rails basic project 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ruby 2.5.0
 
-Things you may want to cover:
+database mysql
 
-* Ruby version
+using foreman gem, web pack and vue.js components
 
-* System dependencies
+to run local host use: 
+```
+foreman start 
+```
+instead of rails s 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+beacause foreman is already set to start the frontend server as well 
